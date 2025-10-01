@@ -1,0 +1,70 @@
+.galleryPage {
+  background: black;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-wrap: wrap;    
+  gap: 20px;           
+  padding: 20px;
+  background-color: black;
+  justify-content: center;
+}
+
+.movieContainer {
+  flex: 0 1 calc(20% - 20px); 
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.movieContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.movieContainer h2 {
+  font-size: 1.2em;
+  margin: 10px;
+  text-align: center;
+  color: brown;
+  word-wrap: break-word;
+}
+
+/* tag */
+.genreTags {
+  display: flex;
+  flex-wrap: wrap;;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.tag {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #444;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #666;
+}
+
+.tag.active {
+  background: #ff4b5c;
+  color: white;
+  font-weight: bold;
+}
+
+

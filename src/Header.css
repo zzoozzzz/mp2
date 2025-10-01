@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;   
+  align-items: center;              
+  background-color: black;
+  padding: 20px 40px;
+  /* border-bottom: 3px solid #ff0033;  */
+  position: relative;               
+  z-index: 100;                    
+}
+
+.logo {
+  font-family: "Lora", cursive;
+  font-size: 2.5rem;
+  color: #ff0033;
+  text-shadow: 0 0 8px #ff3366, 0 0 12px #ff0033;
+}
+
+.nav a {
+  font-family: "DM sans", cursive;
+  font-size: 2rem;
+  color: #ff0033;
+  text-decoration: none;
+  text-shadow: 0 0 8px #ff3366, 0 0 12px #ff0033;
+  transition: color 0.3s ease;
+  margin: 0; 
+}
+
+.nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 12px #ff3366, 0 0 20px #ff0033;
+}
+
+.nav a:not(:last-child)::after {
+  content: "|";
+  margin: 0 12px;
+  color: #ff0033;
+  text-shadow: 0 0 8px #ff3366, 0 0 12px #ff0033;
+}
