@@ -19,15 +19,15 @@ function Search({ movies }: SearchProps) {
   const [order, setOrder] = useState<"asc" | "desc">("asc");
   const navigate = useNavigate();
 
-  // 过滤
+  // filter
   const filtered = movies.filter((movie) =>
     movie.title.toLowerCase().includes(query.toLowerCase())
   );
 
-  // 排序
+  // sort
   const sorted = [...filtered].sort((a, b) => {
     if (query.trim()) {
-      // 优先以 query 开头的
+      // query first
       const aStarts = a.title.toLowerCase().startsWith(query.toLowerCase());
       const bStarts = b.title.toLowerCase().startsWith(query.toLowerCase());
 
@@ -35,7 +35,7 @@ function Search({ movies }: SearchProps) {
       if (!aStarts && bStarts) return 1;
     }
 
-    // 正常排序逻辑
+    // sort logic
     let comparison = 0;
     if (sortBy === "title") {
       comparison = a.title.localeCompare(b.title);

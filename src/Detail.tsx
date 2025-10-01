@@ -21,7 +21,6 @@ function Detail({ movies: globalMovies }: { movies: Movie[] }) {
 
   const state = location.state as { movies?: Movie[]; index?: number };
 
-  // 使用 state.movies（搜索或过滤后的列表），否则 fallback 到全局
   const movieList = state?.movies ?? globalMovies;
   const currentIndex =
     state?.index !== undefined
@@ -50,7 +49,7 @@ function Detail({ movies: globalMovies }: { movies: Movie[] }) {
 
   return (
     <div className="detailPage">
-      {/* 背景图 */}
+      {/* backdrop*/}
       <div
         className="detailBackdrop"
         style={{
@@ -58,7 +57,7 @@ function Detail({ movies: globalMovies }: { movies: Movie[] }) {
         }}
       />
 
-      {/* 前景内容 */}
+      {/* front view*/}
       <div className="detailContent">
         <h1 className="detailTitle">{movie.title}</h1>
         <div className="detailMeta">

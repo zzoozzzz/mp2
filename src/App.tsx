@@ -43,18 +43,6 @@ function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
 
-  // fetch data
-  // useEffect(() => {
-  //   async function fetchMovies() {
-  //     try {
-  //       const response = await axios.get<MovieResponse>(popularUrl);
-  //       setMovies(response.data.results);
-  //     } catch (error) {
-  //       console.error("Error fetching movies:", error);
-  //     }
-  //   }
-  //   fetchMovies();
-  // }, [popularUrl]);
   useEffect(() => {
   async function fetchMovies() {
     try {
@@ -67,9 +55,9 @@ function App() {
         );
 
         response.data.results.forEach((movie) => {
-          if (!seen.has(movie.id)) {  // 如果没出现过
-            seen.add(movie.id);       // 记录 id
-            allMovies.push(movie);    // 再添加
+          if (!seen.has(movie.id)) {  
+            seen.add(movie.id);      
+            allMovies.push(movie);    
           }
         });
       }

@@ -1,21 +1,15 @@
 .detailPage {
-  /* position: relative;
-  min-height: 100vh;
-  color: white;
-  font-family: 'Arial', sans-serif;
-  overflow: hidden; */
   position: relative;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* 🔥 内容贴到底部 */
+  justify-content: flex-end; 
   align-items: left;
   padding: 40px;
   color: white;
   border-radius: 5%;
 }
 
-/* 背景图 */
 .detailBackdrop {
   position: absolute;
   top: 0;
@@ -34,11 +28,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px; /* 高度可调 */
+  height: 150px; 
   background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
 }
 
-/* 内容 */
 .detailContent {
   position: relative;
   z-index: 1;
@@ -49,7 +42,6 @@
   padding-bottom: 150px;
 }
 
-/* 标题 */
 .detailTitle {
   font-size: 5rem;
   font-weight: bold;
@@ -57,7 +49,6 @@
   color: white;
 }
 
-/* 元信息 */
 .detailMeta {
   font-size: 1.3rem;
   margin-bottom: 20px;
@@ -69,7 +60,6 @@
   color: #ffcc00;
 }
 
-/* 简介 */
 .detailOverview {
   margin-top: 20px;
   font-size: 1.5rem;
@@ -78,7 +68,6 @@
   color: #e0e0e0;
 }
 
-/* 固定在屏幕底部的按钮 */
 .navButtons {
   position: fixed;
   bottom: 30px;
@@ -99,9 +88,9 @@
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s;
-  border: none;        /* 🔥 去掉默认边框 */
-  outline: none;       /* 🔥 去掉点击蓝框 */
-  box-shadow: none;    /* 🔥 去掉默认阴影 */
+  border: none;       
+  outline: none;       
+  box-shadow: none;    
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,6 +106,6 @@
 }
 
 .navButtons button:focus {
-  outline: none;       /* 🔥 确保聚焦时不加蓝圈 */
+  outline: none;       
   box-shadow: none;
 }
